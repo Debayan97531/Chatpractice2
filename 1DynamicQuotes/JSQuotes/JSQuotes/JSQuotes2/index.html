@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+   
+  
+
+<div id="container">
+    <div class="inner" data-aos="zoom-in">
+        <div class="box">
+            <p class="number">
+                <img src="twitter.png" 
+                alt="tweetMee" title="TweetMe" 
+                id="tweetMe" />
+            </p>
+
+            <div class="text">
+                <i class="start-quote fas fa-quote-left" ></i>
+                <p id="quotes" class="quote"></p>
+                <p id="author" class="author"></p>
+            </div>
+
+            <label class="button">
+                <p id="newQ">new Quotes</p>
+            </label>
+        </div>
+    </div>
+</div>/
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();//for pop-up animation while page refresh
+
+        const quotes = document.getElementById('quotes');//to display quotes
+        const author = document.getElementById('author');//to display author
+        const newQ = document.getElementById('newQ');
+        const tweetMe = document.getElementById('tweetMe');//tweet that data in twitter
+        let realData = ""; //empty string to show details after refreshing
+        let quotesData = "";//so that we can access later
+
+        const tweetNow = () => {
+            let tweetPost = `https://twitter.com/intent/tweet?text=${quotesData.text} ${quotesData.author}`;//template literals
+            window.open(tweetPost);//query parameter after $ neither quotes will not be seen in twitter
+        }
+
+        const getNewQuotes = () => {
+            let rnum = Math.floor(Math.random() * 30 );//randomly call api data
+            //console.log(realData[rnum].author);
+            quotesData = realData[rnum];
+            quotes.innerText = `${quotesData.text}`;//displaying quotes text randomly
+            quotesData.author == null
+                ? (author.innerHTML = "unKnown") //when there is no author
+                : (author.innerHTML = `${quotesData.author}`);
+            //author.innerText = `${quotesData.author}`;//displaying author
+            //console.log(rnum);
+            //console.log(realData[5].author);
+        };
+        const getQuotes = async () => {  //to refresh or load my page
+            const api = "https://type.fit/api/quotes";
+            try {
+                let data = await fetch(api);
+                realData = await data.json();//some time req to get data neither show pending
+                getNewQuotes();//to randomly get new quotes
+                //console.log(data.json());
+                //console.log(realData);
+                //console.log(realData[9].text);
+            } catch (error) { }
+        };
+
+        tweetMe.addEventListener('click', tweetNow);
+        newQ.addEventListener('click', getNewQuotes);//to add event when newQ clicked...don't add parenthesis
+                                                    //bcs then automatic call will happen
+
+        getQuotes();
+    </script>
+</body>
+
+</html>

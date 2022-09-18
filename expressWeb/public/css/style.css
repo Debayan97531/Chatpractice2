@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family :'Times New Roman', Times, serif;
+}
+:root{
+    --main-bg : #1e272e;
+    --main-color : rgb(137, 178, 212);
+}
+html{
+    font-size : 62.5%;
+
+}
+.row{
+    margin: 0;
+}
+.main-menu{
+    background-color : var(--main-bg);
+}
+.navbar{
+    color : rgb(252, 238, 238);
+    padding: 2rem 0;
+}
+.navbar a{
+    color: rgb(239, 130, 130);
+    font-size:1.8rem;
+}
+.navbar-toggler{
+    background-color : rgb(191, 131, 131);
+}

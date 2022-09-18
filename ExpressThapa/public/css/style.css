@@ -1,0 +1,33 @@
+html{
+    font-size:62.5%;
+    height:100%;
+}
+
+
+h1{
+    color:aquamarine;
+}
+
+.footer{
+    width:100%;
+    height: 16rem;
+    background-color :antiquewhite;
+}
+
+.footer p{
+    color:rgb(197, 51, 51);
+    text-align:center;
+    line-height: 6rem;
+    margin-top: auto;
+}
+img{
+    height: 140px;
+    width: 140px;
+}
+body{
+    display:flex;
+    font-weight:bold;
+    flex-direction: column;
+    height: 100%;
+
+}

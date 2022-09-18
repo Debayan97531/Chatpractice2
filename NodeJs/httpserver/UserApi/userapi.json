@@ -1,0 +1,90 @@
+[
+    {
+        "id":1,
+        "name":"debayan",
+        "email":"deb@gmail.com",
+        "address":{
+                "street":"elgin road",
+                "city":"KOl",
+                "pin":94
+        }
+            
+    },
+    {
+        "id":2,
+        "name":"deb",
+        "email":"deb09@gmail.com",
+        "address":{
+                "street":"MG road",
+                "city":"KOl",
+                "pin":99
+        }
+            
+    },
+    {
+        "id":3,
+        "name":"bhag",
+        "email":"deb11@gmail.com",
+        "address":{
+                "street":"AB road",
+                "city":"KOl",
+                "pin":98
+        }
+            
+    },
+    {
+        "id":4,
+        "name":"amit",
+        "email":"amit@gmail.com",
+        "address":{
+                "street":"CD road",
+                "city":"Mum",
+                "pin":99
+        }
+            
+    },
+    {
+        "id":5,
+        "name":"de",
+        "email":"de@gmail.com",
+        "address":{
+                "street":"elll road",
+                "city":"Del",
+                "pin":94
+        }
+            
+    },
+    {
+        "id":6,
+        "name":"ghh",
+        "email":"ghh@gmail.com",
+        "address":{
+                "street":"tyyy road",
+                "city":"KOl",
+                "pin":98
+        }
+            
+    },
+    {
+        "id":7,
+        "name":"nn",
+        "email":"nn@gmail.com",
+        "address":{
+                "street":"nn road",
+                "city":"KOl",
+                "pin":99
+        }
+            
+    },
+    {
+        "id":1,
+        "name":"ghh",
+        "email":"deb999@gmail.com",
+        "address":{
+                "street":"hhh road",
+                "city":"KOl",
+                "pin":88
+        }
+            
+    }
+]

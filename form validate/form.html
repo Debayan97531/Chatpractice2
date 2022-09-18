@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript from validate</h1>
+    <form name="form" onsubmit="return validate()">
+        name: <input type="text" name="name"/><br>
+        Password:<input type="password" name="password"/><br>
+        <input type="submit" value="login"/>
+    </form>
+
+
+    <script>
+        let validate = () =>{
+                var name=document.form.name.value;
+                var password=document.form.password.value;
+
+                if(name==null || name=="")
+                {
+                    alert("name can't be empty...");
+                    return false;
+                }
+                else if(password.length<5)
+                {
+                    alert("password at least 5 characters");
+                    return false;
+                }
+        }
+    </script>
+</body>
+</html>
